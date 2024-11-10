@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .container {
+            margin-bottom: 20px;
+        }
+        .timer, .stopwatch, .tasks {
+            margin-bottom: 20px;
+        }
+        button {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container timer">
+        <h2>Timer</h2>
+        <input type="number" id="timerInput" placeholder="Seconds" min="0" step="1">
+        <button onclick="startTimer()">Start Timer</button>
+        <button onclick="stopTimer()">Stop Timer</button>
+        <p id="timerDisplay">00:00</p>
+    </div>
+    
+    <div class="container stopwatch">
+        <h2>Stopwatch</h2>
+        <button onclick="startStopwatch()">Start Stopwatch</button>
+        <button onclick="stopStopwatch()">Stop Stopwatch</button>
+        <button onclick="resetStopwatch()">Reset Stopwatch</button>
+        <p id="stopwatchDisplay">00:00:00</p>
+    </div>
+    
+    <div class="container">
+        <h1>Task List</h1>
+        <input type="text" id="new-task" placeholder="Add a new task...">
+        <button onclick="addTask()">Add</button>
+        <ul id="tasks"></ul>
+    </div>
+
+    
+
+</html>
+    </div>
+
+    <script src="in.js"></script>
+</body>
+</html>

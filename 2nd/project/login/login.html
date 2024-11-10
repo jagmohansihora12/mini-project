@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login form</title>
+    <link rel="stylesheet" href="loginstyle.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <nav>
+          <a href="../index/time.html">Home</a>
+</nav>
+<Main>
+    <div class="wrapper">
+        <form action="">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Username" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input id="password" type="password" placeholder="Password" required>
+                <img src="eye-close.png" id="eyeicon">
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <div class="remember-forgot">
+                <label for=""><input type="checkbox"> remember Me</label>
+                <a href="#">Forget Password</a>
+            </div>
+            <button type="submit" class="btn" ><a href="../index/time.html">Login</a></button>
+            <div class="register-link">
+                <p>Don't have an account? <a href="#">Register</a></p>
+            </div>
+        </form>
+    </div>
+</Main>
+<script>
+    let eyeicon = document.getElementById("eyeicon");
+    let password = document.getElementById("password");
+
+    eyeicon.onclick = function(){
+        if(password.type == "password"){
+            password.type ="text";
+            eyeicon.src ="eye-open.png";
+        }
+        else{
+            password.type ="password";
+            eyeicon.src ="eye-close.png";
+        }
+    }
+</script>
+</body>
+</html>
